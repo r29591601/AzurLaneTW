@@ -25,17 +25,10 @@ done
 chmod +x apkeep
 
 # Download Azur Lane
-download_azurlane () {
-    if [ ! -f "com.hkmanjuu.azurlane.gp.xapk" ]; then
-    ./apkeep -a com.hkmanjuu.azurlane.gp .
-    fi
-}
-
 if [ ! -f "com.hkmanjuu.azurlane.gp.apk" ]; then
     echo "Get Azur Lane apk"
-    download_azurlane
-    unzip -o com.hkmanjuu.azurlane.gp.xapk -d AzurLane
-    cp AzurLane/com.hkmanjuu.azurlane.gp.apk .
+    wget https://www.mygame.com.tw/MyGameAD/Accept.aspx?P=YAS3ZA2RSR&S=QUNRMMN7HY -O com.hkmanjuu.azurlane.gp.apk -q
+    echo "apk downloaded !"
 fi
 
 # Download Perseus
